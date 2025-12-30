@@ -1,0 +1,30 @@
+header {
+	position: absolute;
+	width: 100%;
+	top: 0;
+	left: 0;
+	z-index: var(--z-header);
+
+	.container {
+		height: 152px;
+
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	.logo {
+		flex: 0 0 135px;
+	}
+
+	.burger {
+		flex: 0 0 40px;
+		height: 40px;
+	}
+
+	@media (width < 768px) {
+		.container {
+			height: 80px;
+		}
+	}
+}

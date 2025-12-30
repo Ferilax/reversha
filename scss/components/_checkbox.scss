@@ -1,0 +1,25 @@
+.component_checkbox {
+	height: 16px;
+	width: 16px;
+	flex: 0 0 16px;
+
+	border-radius: 2px;
+	background: #FEF7F0;
+	cursor: pointer;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	&:has(input:checked) {
+		background: url("../images/icons/checkbox-marker.svg") 50% no-repeat #FEF7F0;
+	}
+
+	input {
+		position: absolute;
+		z-index: -9999;
+		width: 0;
+		height: 0;
+		visibility: hidden;
+	}
+}

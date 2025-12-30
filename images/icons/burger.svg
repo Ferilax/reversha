@@ -1,0 +1,12 @@
+<svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+	<g data-figma-bg-blur-radius="40">
+		<rect x="0.5" y="0.5" width="39" height="39" rx="19.5" stroke="#70695E" />
+		<rect x="10" y="15" width="20" height="2" rx="1" fill="#322105" />
+		<rect x="10" y="23" width="20" height="2" rx="1" fill="#322105" />
+	</g>
+	<defs>
+		<clipPath id="bgblur_0_7540_933_clip_path" transform="translate(40 40)">
+			<rect x="0.5" y="0.5" width="39" height="39" rx="19.5" />
+		</clipPath>
+	</defs>
+</svg>
