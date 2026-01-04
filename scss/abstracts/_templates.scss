@@ -29,7 +29,10 @@
 	color: white;
 	background: transparent;
 
+	pointer-events: none;
+
 	.head {
+		pointer-events: all;
 		padding: 0 32px;
 		height: 104px;
 
@@ -51,6 +54,7 @@
 	}
 
 	.body {
+		pointer-events: all;
 		padding: 32px 40px;
 		margin-top: 10px;
 

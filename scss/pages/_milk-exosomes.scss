@@ -63,11 +63,13 @@
 	}
 
 	.item-li {
-		padding-left: 10px;
-		margin-left: 16px;
+		position: relative;
+		padding-left: 18px;
 
-		&::marker {
-			margin-left: 20px;
+		&::before {
+			position: absolute;
+			left: 0;
+			top: 0;
 			content: "•";
 		}
 	}
