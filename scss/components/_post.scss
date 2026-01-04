@@ -1,33 +1,6 @@
-h1 {
-	@extend %page-title;
-}
-
-.news,
-.blog {
-	margin: 60px 0 170px;
-
-	--preview-padding: 40px;
-
-	.component_tab-head {
-		margin-bottom: 60px;
-	}
-
-	.tab-content {
-		display: grid;
-		grid-template-columns: repeat(3, 1fr);
-		column-gap: 20px;
-		row-gap: 40px;
-	}
-
-	.item {
-		display: flex;
-		flex-direction: column;
-
-		display: grid;
-		grid-template-rows: subgrid;
-		grid-row: span 3;
-		gap: 0;
-	}
+.component_post {
+	display: flex;
+	flex-direction: column;
 
 	.item-title {
 		margin-top: 24px;
@@ -46,8 +19,7 @@ h1 {
 	}
 
 	.preview {
-		height: 100%;
-		padding: var(--preview-padding);
+		padding: 40px;
 		min-height: 380px;
 
 		border-radius: 40px;
@@ -56,8 +28,8 @@ h1 {
 		position: relative;
 
 		display: flex;
-		flex-direction: column;
 		align-items: start;
+		flex-direction: column;
 		gap: 30px;
 
 		cursor: pointer;
@@ -67,6 +39,8 @@ h1 {
 		font-family: Manrope;
 		font-size: 18px;
 		line-height: 1.4;
+
+		overflow: hidden;
 	}
 
 	.preview-title {
@@ -95,7 +69,6 @@ h1 {
 		display: flex;
 		gap: 4px;
 
-
 		img {
 			border-radius: 10px;
 			object-fit: cover;
@@ -104,12 +77,6 @@ h1 {
 		}
 	}
 
-	.show-more {
-		@extend %button-black-border;
-		margin: 80px auto 0;
-	}
-
-	// ----------------------------------------------------------------------------------------------------
 	.preview._s {
 		background: url("../images/s.png") right / contain no-repeat #EBEBEB;
 
@@ -119,7 +86,6 @@ h1 {
 		}
 	}
 
-	// ----------------------------------------------------------------------------------------------------
 	.preview._u {
 		background: url("../images/u.png") right / cover no-repeat var(--milk);
 
@@ -130,29 +96,11 @@ h1 {
 		}
 	}
 
-	@media (width < 1440px) {
-		margin-bottom: 120px;
-		margin-top: 40px;
-
-		.tab-content {
-			grid-template-columns: repeat(2, 1fr);
-		}
-	}
-
 	@media (width < 1024px) {
-		margin-top: 40px;
-		margin-bottom: 80px;
-
-		.component_tab-head {
-			margin-bottom: 40px;
-		}
-
-		.tab-content {
-			grid-template-columns: 1fr;
-		}
-
 		.preview {
 			border-radius: 30px;
+			padding: 30px;
+			gap: 20px;
 		}
 
 		.preview-avatars {
@@ -171,43 +119,14 @@ h1 {
 		.item-date {
 			margin: 0;
 		}
-
-		.show-more {
-			margin-top: 60px;
-		}
 	}
 
 	@media (width < 768px) {
 		margin-top: 20px;
 
-		.component_tab-head {
-			margin-bottom: 20px;
-		}
-
 		.preview {
+			padding: 20px;
 			border-radius: 20px;
 		}
-	}
-}
-
-.news {
-	.preview {
-		contain: paint;
-
-	}
-
-	.preview-bg {
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-		z-index: 1;
-		object-fit: cover;
-	}
-
-	.preview-tag {
-		position: relative;
-		z-index: 2;
 	}
 }

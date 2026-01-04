@@ -1,0 +1,78 @@
+.section_comments {
+	margin-top: 192px;
+
+	@media (width < 1440px) {
+		margin-top: 150px;
+	}
+
+	@media (width < 768px) {
+		margin-top: 100px;
+	}
+}
+
+.faq {
+	margin-top: 140px;
+
+	.title {
+		@extend %h2;
+	}
+
+	.head {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: 32px;
+	}
+
+	.all-q {
+		@extend %button-black-border;
+		flex: 0 0 auto;
+		width: max-content;
+	}
+
+	._mobile {
+		display: none;
+	}
+
+	@media (width < 1024px) {
+		margin-top: 120px;
+
+		.section_accordions {
+			margin-top: 40px;
+		}
+
+		.all-q {
+			margin: 40px auto 0;
+		}
+
+		._mobile {
+			display: flex;
+		}
+
+		._desktop {
+			display: none;
+		}
+	}
+}
+
+.section_banner {
+	margin: 160px 0;
+
+	.title {
+		max-width: 842px;
+	}
+
+	@media (width >=1200px) {
+		.right {
+			padding: 42px 118px 0 112px;
+		}
+	}
+
+	@media (width < 1440px) {
+		margin: 100px 0 120px;
+	}
+
+	@media (width < 1024px) {
+		margin: 60px 0 80px;
+	}
+}

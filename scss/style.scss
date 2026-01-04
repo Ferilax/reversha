@@ -14,6 +14,10 @@
 @import "components/textarea";
 @import "components/tabs";
 @import "components/accordion";
+@import "components/post";
+@import "components/search";
+
+@import "components/sections";
 
 .page_main {
 	@import "pages/main";
@@ -35,13 +39,42 @@
 	@import "pages/contacts";
 }
 
-html._lock-scroll {
-	overflow: hidden;
-	scrollbar-gutter: stable;
+.page_comments {
+	@import "pages/comments";
+}
 
-	.mask {
-		opacity: 1;
-		pointer-events: all;
+.page_instruction {
+	@import "pages/instruction";
+}
+
+.page_milk-exosomes {
+	@import "pages/milk-exosomes";
+}
+
+.page_why-reversha {
+	@import "pages/why-reversha";
+}
+
+.page_partners {
+	@import "pages/partners";
+}
+
+html {
+	&._lock-scroll {
+		overflow: hidden;
+		scrollbar-gutter: stable;
+
+		.mask {
+			opacity: 1;
+			pointer-events: all;
+		}
+	}
+
+	@media (width >=1024px) {
+		&._animation {
+			overflow: hidden;
+			scrollbar-gutter: stable;
+		}
 	}
 }
 

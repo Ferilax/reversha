@@ -63,6 +63,25 @@
 .component_tab-head {
 	border-bottom: 1px solid var(--grey);
 
+	display: flex;
+	align-items: end;
+	flex-direction: row-reverse;
+	justify-content: space-between;
+
+	&:not(:has(.component_search)) {
+		flex-direction: row;
+	}
+
+	.component_search {
+		@media (width >=1440px) {
+			border-color: transparent;
+
+			&:focus-within:not(:has(:placeholder-shown)) {
+				border-color: var(--grey);
+			}
+		}
+	}
+
 	.tabs {
 		display: flex;
 		gap: 40px;
@@ -73,13 +92,21 @@
 		@extend %txt;
 	}
 
+	@media (width < 1440px) {
+		display: block;
+
+		.component_search {
+			margin-bottom: 40px;
+		}
+	}
+
 	@media (width < 1024px) {
 		.tabs {
 			gap: 20px;
 			overflow-x: auto;
 			white-space: nowrap;
 
-			margin: 0 calc(var(--container-padding) * -1);
+			margin: 0 calc(var(--container-padding) * -1) 0;
 			padding: 0 var(--container-padding);
 		}
 	}

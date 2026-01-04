@@ -2,62 +2,9 @@ h1 {
 	@extend %page-title;
 }
 
-.accordions {
-	margin-top: 60px;
-
-	.container {
-		display: flex;
-		flex-direction: column;
-		gap: 20px;
-	}
-
-	.accordion__q {
-		@extend %h5;
-		color: var(--grey);
-	}
-
-	.accordion._open {
-		.accordion__q {
-			color: var(--black);
-		}
-	}
-
-	.accordion__a {
-		font-size: 24px;
-		font-family: Manrope;
-		line-height: 1.4;
-	}
-
-	@media (width < 1440px) {
-		.accordion__a {
-			font-size: 22px;
-		}
-	}
-
-	@media (width < 1024px) {
-		.accordion__a {
-			font-size: 20px;
-		}
-	}
-
+.section_accordions {
 	@media (width < 768px) {
-		.container {
-			gap: 10px;
-		}
-
-		.accordion__a {
-			font-size: 18px;
-		}
-	}
-
-	@media (width < 425px) {
-		.accordion__q {
-			font-size: 18px;
-		}
-
-		.accordion__a {
-			font-size: 16px;
-		}
+		margin-top: 40px;
 	}
 }
 
@@ -140,5 +87,21 @@ h1 {
 
 	@media (width < 1024px) {
 		background: #F5F3F4;
+
+		display: none;
+	}
+}
+
+.component_search {
+	margin-top: 40px;
+
+	@media (width < 768px) {
+		margin-top: 20px;
+	}
+}
+
+footer {
+	@media (width < 1024px) {
+		margin-top: 80px;
 	}
 }
